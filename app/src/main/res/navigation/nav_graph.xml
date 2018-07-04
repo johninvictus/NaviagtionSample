@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/oneFragment">
+
+    <fragment
+        android:id="@+id/oneFragment"
+        android:name="com.binding.invictus.navigationsample.OneFragment"
+        android:label="fragment_one"
+        tools:layout="@layout/fragment_one" >
+        <action
+            android:id="@+id/action_one_to_two"
+            app:destination="@id/twoFragment" />
+    </fragment>
+    <!--animations here-->
+    <!--app:enterAnim="@anim/slide_in_right"-->
+    <!--app:exitAnim="@anim/slide_out_left"-->
+    <!--app:popEnterAnim="@anim/slide_in_left"-->
+    <!--app:popExitAnim="@anim/slide_out_right"-->
+    <fragment
+        android:id="@+id/twoFragment"
+        android:name="com.binding.invictus.navigationsample.TwoFragment"
+        android:label="fragment_two"
+        tools:layout="@layout/fragment_two" >
+        <argument
+            android:name="amount"
+            android:defaultValue="1"
+            app:type="integer" />
+    </fragment>
+</navigation>
